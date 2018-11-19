@@ -1,4 +1,4 @@
-# MM-IT website Manual
+# Junique Virgile website Manual
 
 Welcome ! built with `Reactjs` and `npm`.
 

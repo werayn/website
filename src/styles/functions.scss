@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+@function asset($file) {
+    @return url($assetBasePath + '/' + $file);
+}
+
+@function remy($pxsize) {
+    @return ($pxsize/$base-size)+rem;
+}

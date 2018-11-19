@@ -8,11 +8,11 @@ class Footer extends React.Component {
                     {'my test of Footer'}
                 </p>
                 <p>
-                    {"add your company, social, some ADM info"}
+                    {'add your company, social, some ADM info'}
                 </p>
             </div>
         );
     }
 }
 
-export default Footer;
+export { Footer };

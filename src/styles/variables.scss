@@ -1,0 +1,22 @@
+$assetBasePath: '../assets';
+$base-size: 12;
+
+$bgGradient: linear-gradient(125deg, rgb(20, 30, 48), rgb(23, 36, 55) 20%, rgb(26, 41, 62) 40%, rgb(30, 47, 70) 60%, rgb(33, 53, 77) 80%, rgb(36, 59, 85));;
+$bgModalOnboarding: #f9f9fb;
+$bgButton: linear-gradient(97deg, #2b32b2, #2e44b7 20%, #2e56bd 40%, #2b67c2 60%, #2477c7 79%, #1488cc);
+
+$faded-red: #de3b3d;
+$danger: rgba(222, 59, 61, 0.25);
+$danger-border: $faded-red;
+$success: rgba(96, 181, 70, 0.25);
+$success-border: #60b546;
+
+$greyish-brown: #404040;
+$dark-grey-blue: #2d3e4f;
+$cool-grey: #abb4bd;
+$cool-grey-25: rgba(171, 180, 189, 0.25);
+$cool-grey-75: rgba(171, 180, 189, 0.75);
+$light-grey-25: rgba(255, 255, 255, 0.25);
+$shadow-black: rgba(0, 0, 0, 0.05);
+
+$logo: url('../assets/logo.png');

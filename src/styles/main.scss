@@ -1,0 +1,22 @@
+@import 'bulma/bulma';
+@import 'bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.sass';
+
+@import './variables.scss';
+@import './functions.scss';
+@import './spacing.scss';
+@import './typography.scss';
+@import './helpers.scss';
+@import './mixins.scss';
+
+@import '../containers/Home/style.scss';
+@import '../containers/Header/style.scss';
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+}

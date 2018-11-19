@@ -1,0 +1,17 @@
+/* This file should contain all classes that will be shared between pages */
+
+.modal-background {
+    background: $bgGradient;
+    opacity: 0.8;
+}
+
+.spinner {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.has-text-overlined {
+    text-decoration: line-through;
+}
