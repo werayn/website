@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import { App } from './Containers/App';
 import * as serviceWorker from './serviceWorker';
 
 /**
@@ -12,8 +12,9 @@ import * as serviceWorker from './serviceWorker';
  * @version 1.0
  * @since 1.0
  */
+/*eslint react/jsx-filename-extension: 0*/
 ReactDOM.render((
-<App />),
+    <App />
+),
 document.getElementById('root'));
-
 serviceWorker.unregister();
