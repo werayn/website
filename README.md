@@ -1,4 +1,4 @@
-# Junique VIrgile Website 
+# Junique Virgile Website
 ---
 
 ## Description
