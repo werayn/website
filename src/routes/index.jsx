@@ -20,7 +20,7 @@ class MainRouter extends React.Component {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={ Home } />
-                    <Route path="/me" component={ Me } />
+                    <Route path="/about" component={ Me } />
                     <Route path="/blog" component={ Blog } />
                     <Route path="/portfolio" component={ Port } />
                     <Route path="/CV" component={ CV } />

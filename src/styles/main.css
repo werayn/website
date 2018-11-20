@@ -7806,54 +7806,6 @@ b {
   background-color: rgba(171, 180, 189, 0.25);
   margin: 0 auto; }
 
-.navbar-base {
-  background: url("../assets/logo.png");
-  width: 241px;
-  height: 60px; }
-
-.navbar .navbar-brand {
-  flex-grow: 1; }
-
-.navbar .search-box {
-  flex-grow: 1; }
-  .navbar .search-box > div {
-    margin: 0 auto; }
-
-.navbar .cart-button-container {
-  flex-grow: 1;
-  justify-content: space-evenly; }
-  .navbar .cart-button-container > button {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: none;
-    color: red;
-    font-weight: bold;
-    width: 10rem;
-    height: 3.16667rem;
-    border-radius: 1.66667rem;
-    background-image: linear-gradient(107deg, #f46b45, #f37846 20%, #f28547 40%, #f19148 60%, #f09d48 80%, #eea849);
-    box-shadow: 0 2px 10px 0 rgba(45, 62, 79, 0.15); }
-
-.ball {
-  position: relative;
-  animation: bounce 0.5s normal;
-  -webkit-animation: bounce 0.5s normal; }
-
-@keyframes bounce {
-  0% {
-    top: 0;
-    animation-timing-function: ease-in; }
-  25% {
-    top: 10px;
-    animation-timing-function: ease-in; }
-  75% {
-    top: -10px;
-    animation-timing-function: ease-in; }
-  100% {
-    top: 0;
-    animation-timing-function: ease-in; } }
-
 .fade-enter {
   opacity: 0;
   z-index: 1; }
@@ -7861,3 +7813,6 @@ b {
 .fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 250ms ease-in; }
+
+html, body {
+  height: 100%; }
