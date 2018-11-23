@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 488,
+  "end": 486,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 488,
+    "end": 486,
     "loc": {
       "start": {
         "line": 1,
@@ -169,7 +169,7 @@
       {
         "type": "ImportDeclaration",
         "start": 61,
-        "end": 100,
+        "end": 98,
         "loc": {
           "start": {
             "line": 3,
@@ -177,7 +177,7 @@
           },
           "end": {
             "line": 3,
-            "column": 39
+            "column": 37
           }
         },
         "specifiers": [
@@ -234,7 +234,7 @@
         "source": {
           "type": "StringLiteral",
           "start": 81,
-          "end": 99,
+          "end": 97,
           "loc": {
             "start": {
               "line": 3,
@@ -242,20 +242,20 @@
             },
             "end": {
               "line": 3,
-              "column": 38
+              "column": 36
             }
           },
           "extra": {
-            "rawValue": "./Containers/App",
-            "raw": "'./Containers/App'"
+            "rawValue": "containers/App",
+            "raw": "'containers/App'"
           },
-          "value": "./Containers/App"
+          "value": "containers/App"
         }
       },
       {
         "type": "ImportDeclaration",
-        "start": 101,
-        "end": 150,
+        "start": 99,
+        "end": 148,
         "loc": {
           "start": {
             "line": 4,
@@ -269,8 +269,8 @@
         "specifiers": [
           {
             "type": "ImportNamespaceSpecifier",
-            "start": 108,
-            "end": 126,
+            "start": 106,
+            "end": 124,
             "loc": {
               "start": {
                 "line": 4,
@@ -283,8 +283,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 113,
-              "end": 126,
+              "start": 111,
+              "end": 124,
               "loc": {
                 "start": {
                   "line": 4,
@@ -302,8 +302,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 132,
-          "end": 149,
+          "start": 130,
+          "end": 147,
           "loc": {
             "start": {
               "line": 4,
@@ -324,8 +324,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n ",
-            "start": 152,
-            "end": 349,
+            "start": 150,
+            "end": 347,
             "loc": {
               "start": {
                 "line": 6,
@@ -340,8 +340,8 @@
           {
             "type": "CommentBlock",
             "value": "eslint react/jsx-filename-extension: 0",
-            "start": 350,
-            "end": 392,
+            "start": 348,
+            "end": 390,
             "loc": {
               "start": {
                 "line": 15,
@@ -357,8 +357,8 @@
       },
       {
         "type": "ExpressionStatement",
-        "start": 393,
-        "end": 459,
+        "start": 391,
+        "end": 457,
         "loc": {
           "start": {
             "line": 16,
@@ -371,8 +371,8 @@
         },
         "expression": {
           "type": "CallExpression",
-          "start": 393,
-          "end": 458,
+          "start": 391,
+          "end": 456,
           "loc": {
             "start": {
               "line": 16,
@@ -385,8 +385,8 @@
           },
           "callee": {
             "type": "MemberExpression",
-            "start": 393,
-            "end": 408,
+            "start": 391,
+            "end": 406,
             "loc": {
               "start": {
                 "line": 16,
@@ -399,8 +399,8 @@
             },
             "object": {
               "type": "Identifier",
-              "start": 393,
-              "end": 401,
+              "start": 391,
+              "end": 399,
               "loc": {
                 "start": {
                   "line": 16,
@@ -417,8 +417,8 @@
             },
             "property": {
               "type": "Identifier",
-              "start": 402,
-              "end": 408,
+              "start": 400,
+              "end": 406,
               "loc": {
                 "start": {
                   "line": 16,
@@ -438,8 +438,8 @@
           "arguments": [
             {
               "type": "JSXElement",
-              "start": 415,
-              "end": 422,
+              "start": 413,
+              "end": 420,
               "loc": {
                 "start": {
                   "line": 17,
@@ -452,8 +452,8 @@
               },
               "openingElement": {
                 "type": "JSXOpeningElement",
-                "start": 415,
-                "end": 422,
+                "start": 413,
+                "end": 420,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -467,8 +467,8 @@
                 "attributes": [],
                 "name": {
                   "type": "JSXIdentifier",
-                  "start": 416,
-                  "end": 419,
+                  "start": 414,
+                  "end": 417,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -487,13 +487,13 @@
               "children": [],
               "extra": {
                 "parenthesized": true,
-                "parenStart": 409
+                "parenStart": 407
               }
             },
             {
               "type": "CallExpression",
-              "start": 426,
-              "end": 457,
+              "start": 424,
+              "end": 455,
               "loc": {
                 "start": {
                   "line": 19,
@@ -506,8 +506,8 @@
               },
               "callee": {
                 "type": "MemberExpression",
-                "start": 426,
-                "end": 449,
+                "start": 424,
+                "end": 447,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -520,8 +520,8 @@
                 },
                 "object": {
                   "type": "Identifier",
-                  "start": 426,
-                  "end": 434,
+                  "start": 424,
+                  "end": 432,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -537,8 +537,8 @@
                 },
                 "property": {
                   "type": "Identifier",
-                  "start": 435,
-                  "end": 449,
+                  "start": 433,
+                  "end": 447,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -557,8 +557,8 @@
               "arguments": [
                 {
                   "type": "StringLiteral",
-                  "start": 450,
-                  "end": 456,
+                  "start": 448,
+                  "end": 454,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -584,8 +584,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n ",
-            "start": 152,
-            "end": 349,
+            "start": 150,
+            "end": 347,
             "loc": {
               "start": {
                 "line": 6,
@@ -600,8 +600,8 @@
           {
             "type": "CommentBlock",
             "value": "eslint react/jsx-filename-extension: 0",
-            "start": 350,
-            "end": 392,
+            "start": 348,
+            "end": 390,
             "loc": {
               "start": {
                 "line": 15,
@@ -617,8 +617,8 @@
       },
       {
         "type": "ExpressionStatement",
-        "start": 460,
-        "end": 487,
+        "start": 458,
+        "end": 485,
         "loc": {
           "start": {
             "line": 20,
@@ -631,8 +631,8 @@
         },
         "expression": {
           "type": "CallExpression",
-          "start": 460,
-          "end": 486,
+          "start": 458,
+          "end": 484,
           "loc": {
             "start": {
               "line": 20,
@@ -645,8 +645,8 @@
           },
           "callee": {
             "type": "MemberExpression",
-            "start": 460,
-            "end": 484,
+            "start": 458,
+            "end": 482,
             "loc": {
               "start": {
                 "line": 20,
@@ -659,8 +659,8 @@
             },
             "object": {
               "type": "Identifier",
-              "start": 460,
-              "end": 473,
+              "start": 458,
+              "end": 471,
               "loc": {
                 "start": {
                   "line": 20,
@@ -676,8 +676,8 @@
             },
             "property": {
               "type": "Identifier",
-              "start": 474,
-              "end": 484,
+              "start": 472,
+              "end": 482,
               "loc": {
                 "start": {
                   "line": 20,
@@ -703,8 +703,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n ",
-      "start": 152,
-      "end": 349,
+      "start": 150,
+      "end": 347,
       "loc": {
         "start": {
           "line": 6,
@@ -719,8 +719,8 @@
     {
       "type": "CommentBlock",
       "value": "eslint react/jsx-filename-extension: 0",
-      "start": 350,
-      "end": 392,
+      "start": 348,
+      "end": 390,
       "loc": {
         "start": {
           "line": 15,
@@ -1143,9 +1143,9 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./Containers/App",
+      "value": "containers/App",
       "start": 81,
-      "end": 99,
+      "end": 97,
       "loc": {
         "start": {
           "line": 3,
@@ -1153,7 +1153,7 @@
         },
         "end": {
           "line": 3,
-          "column": 38
+          "column": 36
         }
       }
     },
@@ -1170,16 +1170,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 99,
-      "end": 100,
+      "start": 97,
+      "end": 98,
       "loc": {
         "start": {
           "line": 3,
-          "column": 38
+          "column": 36
         },
         "end": {
           "line": 3,
-          "column": 39
+          "column": 37
         }
       }
     },
@@ -1198,8 +1198,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 101,
-      "end": 107,
+      "start": 99,
+      "end": 105,
       "loc": {
         "start": {
           "line": 4,
@@ -1225,8 +1225,8 @@
         "updateContext": null
       },
       "value": "*",
-      "start": 108,
-      "end": 109,
+      "start": 106,
+      "end": 107,
       "loc": {
         "start": {
           "line": 4,
@@ -1251,8 +1251,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 110,
-      "end": 112,
+      "start": 108,
+      "end": 110,
       "loc": {
         "start": {
           "line": 4,
@@ -1277,8 +1277,8 @@
         "binop": null
       },
       "value": "serviceWorker",
-      "start": 113,
-      "end": 126,
+      "start": 111,
+      "end": 124,
       "loc": {
         "start": {
           "line": 4,
@@ -1303,8 +1303,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 127,
-      "end": 131,
+      "start": 125,
+      "end": 129,
       "loc": {
         "start": {
           "line": 4,
@@ -1330,8 +1330,8 @@
         "updateContext": null
       },
       "value": "./serviceWorker",
-      "start": 132,
-      "end": 149,
+      "start": 130,
+      "end": 147,
       "loc": {
         "start": {
           "line": 4,
@@ -1356,8 +1356,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 149,
-      "end": 150,
+      "start": 147,
+      "end": 148,
       "loc": {
         "start": {
           "line": 4,
@@ -1372,8 +1372,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n ",
-      "start": 152,
-      "end": 349,
+      "start": 150,
+      "end": 347,
       "loc": {
         "start": {
           "line": 6,
@@ -1388,8 +1388,8 @@
     {
       "type": "CommentBlock",
       "value": "eslint react/jsx-filename-extension: 0",
-      "start": 350,
-      "end": 392,
+      "start": 348,
+      "end": 390,
       "loc": {
         "start": {
           "line": 15,
@@ -1414,8 +1414,8 @@
         "binop": null
       },
       "value": "ReactDOM",
-      "start": 393,
-      "end": 401,
+      "start": 391,
+      "end": 399,
       "loc": {
         "start": {
           "line": 16,
@@ -1440,8 +1440,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 401,
-      "end": 402,
+      "start": 399,
+      "end": 400,
       "loc": {
         "start": {
           "line": 16,
@@ -1466,8 +1466,8 @@
         "binop": null
       },
       "value": "render",
-      "start": 402,
-      "end": 408,
+      "start": 400,
+      "end": 406,
       "loc": {
         "start": {
           "line": 16,
@@ -1491,8 +1491,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 408,
-      "end": 409,
+      "start": 406,
+      "end": 407,
       "loc": {
         "start": {
           "line": 16,
@@ -1516,8 +1516,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 409,
-      "end": 410,
+      "start": 407,
+      "end": 408,
       "loc": {
         "start": {
           "line": 16,
@@ -1541,8 +1541,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 415,
-      "end": 416,
+      "start": 413,
+      "end": 414,
       "loc": {
         "start": {
           "line": 17,
@@ -1568,8 +1568,8 @@
         "updateContext": null
       },
       "value": "App",
-      "start": 416,
-      "end": 419,
+      "start": 414,
+      "end": 417,
       "loc": {
         "start": {
           "line": 17,
@@ -1595,8 +1595,8 @@
         "updateContext": null
       },
       "value": "/",
-      "start": 420,
-      "end": 421,
+      "start": 418,
+      "end": 419,
       "loc": {
         "start": {
           "line": 17,
@@ -1620,8 +1620,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 421,
-      "end": 422,
+      "start": 419,
+      "end": 420,
       "loc": {
         "start": {
           "line": 17,
@@ -1645,8 +1645,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 423,
-      "end": 424,
+      "start": 421,
+      "end": 422,
       "loc": {
         "start": {
           "line": 18,
@@ -1671,8 +1671,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 424,
-      "end": 425,
+      "start": 422,
+      "end": 423,
       "loc": {
         "start": {
           "line": 18,
@@ -1697,8 +1697,8 @@
         "binop": null
       },
       "value": "document",
-      "start": 426,
-      "end": 434,
+      "start": 424,
+      "end": 432,
       "loc": {
         "start": {
           "line": 19,
@@ -1723,8 +1723,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 434,
-      "end": 435,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
           "line": 19,
@@ -1749,8 +1749,8 @@
         "binop": null
       },
       "value": "getElementById",
-      "start": 435,
-      "end": 449,
+      "start": 433,
+      "end": 447,
       "loc": {
         "start": {
           "line": 19,
@@ -1774,8 +1774,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 449,
-      "end": 450,
+      "start": 447,
+      "end": 448,
       "loc": {
         "start": {
           "line": 19,
@@ -1801,8 +1801,8 @@
         "updateContext": null
       },
       "value": "root",
-      "start": 450,
-      "end": 456,
+      "start": 448,
+      "end": 454,
       "loc": {
         "start": {
           "line": 19,
@@ -1826,8 +1826,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 456,
-      "end": 457,
+      "start": 454,
+      "end": 455,
       "loc": {
         "start": {
           "line": 19,
@@ -1851,8 +1851,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 457,
-      "end": 458,
+      "start": 455,
+      "end": 456,
       "loc": {
         "start": {
           "line": 19,
@@ -1877,8 +1877,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 458,
-      "end": 459,
+      "start": 456,
+      "end": 457,
       "loc": {
         "start": {
           "line": 19,
@@ -1903,8 +1903,8 @@
         "binop": null
       },
       "value": "serviceWorker",
-      "start": 460,
-      "end": 473,
+      "start": 458,
+      "end": 471,
       "loc": {
         "start": {
           "line": 20,
@@ -1929,8 +1929,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 473,
-      "end": 474,
+      "start": 471,
+      "end": 472,
       "loc": {
         "start": {
           "line": 20,
@@ -1955,8 +1955,8 @@
         "binop": null
       },
       "value": "unregister",
-      "start": 474,
-      "end": 484,
+      "start": 472,
+      "end": 482,
       "loc": {
         "start": {
           "line": 20,
@@ -1980,8 +1980,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 484,
-      "end": 485,
+      "start": 482,
+      "end": 483,
       "loc": {
         "start": {
           "line": 20,
@@ -2005,8 +2005,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 485,
-      "end": 486,
+      "start": 483,
+      "end": 484,
       "loc": {
         "start": {
           "line": 20,
@@ -2031,8 +2031,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 486,
-      "end": 487,
+      "start": 484,
+      "end": 485,
       "loc": {
         "start": {
           "line": 20,
@@ -2057,8 +2057,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 488,
-      "end": 488,
+      "start": 486,
+      "end": 486,
       "loc": {
         "start": {
           "line": 21,

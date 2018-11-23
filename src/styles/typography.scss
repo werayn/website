@@ -16,26 +16,6 @@ body, h1, h2, h3, h4, h5, h6, p, div, span, label, input, button, select, textar
     text-decoration: underline;
 }
 
-ul.bulletlist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul.bulletlist li {
-    padding-left: 1em;
-    text-indent: -1.2em;
-    font-size: remy(14);
-}
-
-ul.bulletlist li:before {
-    content: "• ";
-    margin-top: 0;
-    vertical-align: middle;
-    line-height: 1.1em;
-    font-size: remy(30);
-}
-
 b {
     font-weight: bold;
 }

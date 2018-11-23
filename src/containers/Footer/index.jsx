@@ -5,7 +5,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
-                <footer class="footer is-fixed-bottom">
+                <footer className="footer is-fixed-bottom">
                     <FooterInfo />
                 </footer>
             </div>

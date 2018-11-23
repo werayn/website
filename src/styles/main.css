@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 @import url("https://fonts.googleapis.com/css?family=Lora");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -7766,23 +7765,6 @@ body, h1, h2, h3, h4, h5, h6, p, div, span, label, input, button, select, textar
 .has-text-underlined {
   text-decoration: underline; }
 
-ul.bulletlist {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-ul.bulletlist li {
-  padding-left: 1em;
-  text-indent: -1.2em;
-  font-size: 1.16667rem; }
-
-ul.bulletlist li:before {
-  content: "• ";
-  margin-top: 0;
-  vertical-align: middle;
-  line-height: 1.1em;
-  font-size: 2.5rem; }
-
 b {
   font-weight: bold; }
 
@@ -7800,9 +7782,9 @@ b {
 .has-text-overlined {
   text-decoration: line-through; }
 
-#homepage .separator {
+#homepage .test {
   width: 100%;
-  height: 1px;
+  height: 100%;
   background-color: rgba(171, 180, 189, 0.25);
   margin: 0 auto; }
 
@@ -7814,5 +7796,28 @@ b {
   opacity: 1;
   transition: opacity 250ms ease-in; }
 
-html, body {
-  height: 100%; }
+* {
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  position: relative; }
+
+.main-container {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+  /* height of your footer */ }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }

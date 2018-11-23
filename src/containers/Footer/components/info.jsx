@@ -3,7 +3,7 @@ import React from 'react';
 class FooterInfo extends React.Component {
     render() {
         return (
-            <div class="content has-text-centered">
+            <div className="content has-text-centered">
                 <p>
                     <strong>
                         {'Junique Virgile'}

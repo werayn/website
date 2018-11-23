@@ -1,12 +1,13 @@
 import React from 'react';
+import { Welcoming } from './components/welcoming.jsx';
+import { NumberPres } from './components/NumberPres';
 
 class Home extends React.Component {
     render() {
         return (
-            <div id="homepage">
-                <p className="has-font-serif">
-                    {'Hello to the Home'}
-                </p>
+            <div id="homepage test">
+                <Welcoming />
+                <NumberPres />
             </div>
         );
     }

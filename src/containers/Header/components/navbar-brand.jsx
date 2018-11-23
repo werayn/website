@@ -3,8 +3,8 @@ import React from 'react';
 class NavBarBrand extends React.Component {
     render() {
         return (
-            <div class="navbar-brand">
-                <strong class="navbar-item is-tagline">
+            <div className="navbar-brand">
+                <strong className="navbar-item is-tagline">
                     {'Junique Virgile'}
                 </strong>
             </div>

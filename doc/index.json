@@ -566,8 +566,70 @@
   {
     "__docId__": 48,
     "kind": "file",
+    "name": "src/common/history.js",
+    "content": "import { createBrowserHistory } from 'history';\n\n/**\n * @function createBrowserHistory\n * @desc Custom item who can be import every where for navigate into the rooter with a specific url, cf: history API\n * @version 1.0\n * @since 1.0\n * @public\n * @returns {Object} history\n * @property {History} - Main class of the history API\n */\nexport const history = createBrowserHistory();\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/common/history.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "history",
+    "memberof": "src/common/history.js",
+    "static": true,
+    "longname": "src/common/history.js~history",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/common/history.js",
+    "importStyle": "{history}",
+    "description": "Custom item who can be import every where for navigate into the rooter with a specific url, cf: history API",
+    "lineNumber": 12,
+    "since": "1.0",
+    "version": "1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "createBrowserHistory"
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object} history"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "History"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "-",
+        "description": "Main class of the history API"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "history"
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
     "name": "src/containers/404/index.jsx",
-    "content": "import React from 'react';\n\nclass NoMatch extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    { 'Welcome to my custom 404 page '}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport { NoMatch };\n",
+    "content": "// Lib\nimport React from 'react';\n// i18n\nimport { I18n } from 'i18n/index';\n/**\n * 404 container\n * @class NoMatch\n * @reactProps {none} none - none\n * @desc Container for the 404Page when user url is not found\n * @extends {React.Component}\n * @public\n * @version 1.0\n * @since 1.0\n */\nclass NoMatch extends React.Component {\n\n    /**\n     * @method render - lifecycle method for render React Element (jsx)\n     * @desc this render handle every component needed for the 404 page.\n     * @return {object} - React Element\n     * @private\n     * @version 1.0\n     * @since 1.0\n     */\n    render() {\n        return (\n            <div>\n                <p>\n                    { I18n.t('my404') }\n                </p>\n            </div>\n        );\n    }\n}\n\nexport { NoMatch };\n",
     "static": true,
     "longname": "/home/seedz/Project/website/src/containers/404/index.jsx",
     "access": "public",
@@ -575,7 +637,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 49,
+    "__docId__": 51,
     "kind": "class",
     "name": "NoMatch",
     "memberof": "src/containers/404/index.jsx",
@@ -585,16 +647,27 @@
     "export": true,
     "importPath": "Seedz-website/src/containers/404/index.jsx",
     "importStyle": "{NoMatch}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "Container for the 404Page when user url is not found",
+    "lineNumber": 15,
+    "since": "1.0",
+    "version": "1.0",
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "NoMatch"
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{none} none - none"
+      }
+    ],
     "interface": false,
     "extends": [
-      "react~React.Component"
+      "React.Component"
     ]
   },
   {
-    "__docId__": 50,
+    "__docId__": 52,
     "kind": "method",
     "name": "render",
     "memberof": "src/containers/404/index.jsx~NoMatch",
@@ -602,22 +675,32 @@
     "async": false,
     "static": false,
     "longname": "src/containers/404/index.jsx~NoMatch#render",
-    "access": "public",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "params": [],
+    "access": "private",
+    "description": "this render handle every component needed for the 404 page.",
+    "lineNumber": 25,
+    "since": "1.0",
+    "version": "1.0",
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "render - lifecycle method for render React Element (jsx)"
+      }
+    ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "object"
+      ],
+      "spread": false,
+      "description": "React Element"
+    },
+    "params": []
   },
   {
-    "__docId__": 51,
+    "__docId__": 53,
     "kind": "file",
     "name": "src/containers/App.jsx",
-    "content": "import React, { Component } from 'react';\nimport { Provider } from 'react-redux';\nimport { Router } from 'react-router-dom';\nimport MainRouter from './routes';\n\n\n\nclass App extends Component {\n    render() {\n        return (\n        // Provide our store to redux\n            // Rehydration of the store with the localstorage\n            // and we start our router with the every main route\n            <Provider store={ store }>\n                <Router history={ history }>\n                    <MainRouter />\n                </Router>\n            </Provider>\n        );\n    }\n}\n\nexport { App };\n",
+    "content": "import React, { Component } from 'react';\n// import { Provider } from 'react-redux';\nimport { Router } from 'react-router-dom';\nimport MainRouter from 'routes/';\n// History API\nimport { history } from 'common/history';\n// style\nimport 'styles/main.css';\n\n/**\n * Main App component\n * @class App\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {React.Component}\n * @public\n * @version 1.0\n * @since 1.0\n */\nclass App extends Component {\n    /**\n     * @returns {Object} App\n     * @property {Component} App - React main render\n     */\n    render() {\n        return (\n        // Provide our store to redux\n            // Rehydration of the store with the localstorage\n            // and we start our router with the every main route\n        //          <Provider store={ store }>\n            <Router history={ history }>\n                <MainRouter />\n            </Router>\n        //        </Provider>\n        );\n    }\n}\n\nexport { App };\n",
     "static": true,
     "longname": "/home/seedz/Project/website/src/containers/App.jsx",
     "access": "public",
@@ -625,7 +708,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 52,
+    "__docId__": 54,
     "kind": "class",
     "name": "App",
     "memberof": "src/containers/App.jsx",
@@ -635,16 +718,27 @@
     "export": true,
     "importPath": "Seedz-website/src/containers/App.jsx",
     "importStyle": "{App}",
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "description": "Entry point of the react app",
+    "lineNumber": 20,
+    "since": "1.0",
+    "version": "1.0",
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "App"
+      },
+      {
+        "tagName": "@reactProps",
+        "tagValue": "{none} none - none"
+      }
+    ],
     "interface": false,
     "extends": [
-      "react~Component"
+      "React.Component"
     ]
   },
   {
-    "__docId__": 53,
+    "__docId__": 55,
     "kind": "method",
     "name": "render",
     "memberof": "src/containers/App.jsx~App",
@@ -653,38 +747,58 @@
     "static": false,
     "longname": "src/containers/App.jsx~App#render",
     "access": "public",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "params": [],
+    "description": "",
+    "lineNumber": 25,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object} App"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Component"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "App",
+        "description": "React main render"
+      }
+    ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "Object"
+      ],
+      "spread": false,
+      "description": "App"
+    },
+    "params": []
   },
   {
-    "__docId__": 54,
+    "__docId__": 56,
     "kind": "file",
-    "name": "src/containers/Footer/index.jsx",
-    "content": "import React from 'react';\n\nclass Footer extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    {'my test of Footer'}\n                </p>\n                <p>\n                    {\"add your company, social, some ADM info\"}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default Footer;",
+    "name": "src/containers/Blog/index.jsx",
+    "content": "import React from 'react';\n\nclass Blog extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    {'Welcome to my Blog'}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default Blog;\n",
     "static": true,
-    "longname": "/home/seedz/Project/website/src/containers/Footer/index.jsx",
+    "longname": "/home/seedz/Project/website/src/containers/Blog/index.jsx",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 57,
     "kind": "class",
-    "name": "Footer",
-    "memberof": "src/containers/Footer/index.jsx",
+    "name": "Blog",
+    "memberof": "src/containers/Blog/index.jsx",
     "static": true,
-    "longname": "src/containers/Footer/index.jsx~Footer",
+    "longname": "src/containers/Blog/index.jsx~Blog",
     "access": "public",
     "export": true,
-    "importPath": "Seedz-website/src/containers/Footer/index.jsx",
-    "importStyle": "Footer",
+    "importPath": "Seedz-website/src/containers/Blog/index.jsx",
+    "importStyle": "Blog",
     "description": null,
     "lineNumber": 3,
     "undocument": true,
@@ -694,7 +808,157 @@
     ]
   },
   {
-    "__docId__": 56,
+    "__docId__": 58,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Blog/index.jsx~Blog",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Blog/index.jsx~Blog#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/containers/CV/index.jsx",
+    "content": "import React from 'react';\n\nclass CV extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    {'Welcome to my CV'}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default CV;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/CV/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "class",
+    "name": "CV",
+    "memberof": "src/containers/CV/index.jsx",
+    "static": true,
+    "longname": "src/containers/CV/index.jsx~CV",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/CV/index.jsx",
+    "importStyle": "CV",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/CV/index.jsx~CV",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/CV/index.jsx~CV#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/containers/Footer/components/info.jsx",
+    "content": "import React from 'react';\n\nclass FooterInfo extends React.Component {\n    render() {\n        return (\n            <div class=\"content has-text-centered\">\n                <p>\n                    <strong>\n                        {'Junique Virgile'}\n                    </strong>\n                    {' by '}\n                    <a href=\"https://junique-virgile.com\">\n                        {'Social Media'}\n                    </a>\n                    <br />\n                    {' The website content is licensed and private '}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport { FooterInfo };\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Footer/components/info.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "class",
+    "name": "FooterInfo",
+    "memberof": "src/containers/Footer/components/info.jsx",
+    "static": true,
+    "longname": "src/containers/Footer/components/info.jsx~FooterInfo",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Footer/components/info.jsx",
+    "importStyle": "{FooterInfo}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Footer/components/info.jsx~FooterInfo",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Footer/components/info.jsx~FooterInfo#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/containers/Footer/index.jsx",
+    "content": "import React from 'react';\nimport { FooterInfo } from './components/info';\n\nclass Footer extends React.Component {\n    render() {\n        return (\n            <div>\n                <footer class=\"footer is-fixed-bottom\">\n                    <FooterInfo />\n                </footer>\n            </div>\n        );\n    }\n}\n\nexport { Footer };\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Footer/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "class",
+    "name": "Footer",
+    "memberof": "src/containers/Footer/index.jsx",
+    "static": true,
+    "longname": "src/containers/Footer/index.jsx~Footer",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Footer/index.jsx",
+    "importStyle": "{Footer}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 67,
     "kind": "method",
     "name": "render",
     "memberof": "src/containers/Footer/index.jsx~Footer",
@@ -704,7 +968,7 @@
     "longname": "src/containers/Footer/index.jsx~Footer#render",
     "access": "public",
     "description": null,
-    "lineNumber": 4,
+    "lineNumber": 5,
     "undocument": true,
     "params": [],
     "return": {
@@ -714,27 +978,27 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 68,
     "kind": "file",
-    "name": "src/containers/Header/index.jsx",
-    "content": "import React from 'react';\n\nclass Header extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    {'my test of header'}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default Header;",
+    "name": "src/containers/Header/components/navbar-brand.jsx",
+    "content": "import React from 'react';\n\nclass NavBarBrand extends React.Component {\n    render() {\n        return (\n            <div class=\"navbar-brand\">\n                <strong class=\"navbar-item is-tagline\">\n                    {'Junique Virgile'}\n                </strong>\n            </div>\n        );\n    }\n}\n\nexport { NavBarBrand };\n",
     "static": true,
-    "longname": "/home/seedz/Project/website/src/containers/Header/index.jsx",
+    "longname": "/home/seedz/Project/website/src/containers/Header/components/navbar-brand.jsx",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 58,
+    "__docId__": 69,
     "kind": "class",
-    "name": "Header",
-    "memberof": "src/containers/Header/index.jsx",
+    "name": "NavBarBrand",
+    "memberof": "src/containers/Header/components/navbar-brand.jsx",
     "static": true,
-    "longname": "src/containers/Header/index.jsx~Header",
+    "longname": "src/containers/Header/components/navbar-brand.jsx~NavBarBrand",
     "access": "public",
     "export": true,
-    "importPath": "Seedz-website/src/containers/Header/index.jsx",
-    "importStyle": "Header",
+    "importPath": "Seedz-website/src/containers/Header/components/navbar-brand.jsx",
+    "importStyle": "{NavBarBrand}",
     "description": null,
     "lineNumber": 3,
     "undocument": true,
@@ -744,14 +1008,14 @@
     ]
   },
   {
-    "__docId__": 59,
+    "__docId__": 70,
     "kind": "method",
     "name": "render",
-    "memberof": "src/containers/Header/index.jsx~Header",
+    "memberof": "src/containers/Header/components/navbar-brand.jsx~NavBarBrand",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/containers/Header/index.jsx~Header#render",
+    "longname": "src/containers/Header/components/navbar-brand.jsx~NavBarBrand#render",
     "access": "public",
     "description": null,
     "lineNumber": 4,
@@ -764,10 +1028,455 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 71,
+    "kind": "file",
+    "name": "src/containers/Header/components/navbar-end.jsx",
+    "content": "import React from 'react';\n\nclass NavBarEnd extends React.Component {\n    render() {\n        return (\n            <div id=\"navbar-default\" class=\"navbar-menu\">\n                <div class=\"navbar-end\">\n                    <span class=\"navbar-item\">\n                        <a class=\"is-link is-active\" href=\"/\">\n                            { 'Home' }\n                        </a>\n                    </span>\n                    <span class=\"navbar-item\">\n                        <a class=\"is-link is-active\" href=\"/CV\">\n                            { 'CV' }\n                        </a>\n                    </span>\n                    <span class=\"navbar-item\">\n                        <a class=\"is-link is-active\" href=\"/blog\">\n                            { 'Blog' }\n                        </a>\n                    </span>\n                    <span class=\"navbar-item\">\n                        <a class=\"is-link is-active\" href=\"/portfolio\">\n                            { 'PortFolio' }\n                        </a>\n                    </span>\n                    <span class=\"navbar-item\">\n                        <a class=\"is-link is-active\" href=\"/about\">\n                            { 'About' }\n                        </a>\n                    </span>\n                </div>\n            </div>\n        );\n    }\n}\n\nexport { NavBarEnd };\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Header/components/navbar-end.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 72,
+    "kind": "class",
+    "name": "NavBarEnd",
+    "memberof": "src/containers/Header/components/navbar-end.jsx",
+    "static": true,
+    "longname": "src/containers/Header/components/navbar-end.jsx~NavBarEnd",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Header/components/navbar-end.jsx",
+    "importStyle": "{NavBarEnd}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Header/components/navbar-end.jsx~NavBarEnd",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/components/navbar-end.jsx~NavBarEnd#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/containers/Header/index.jsx",
+    "content": "import React from 'react';\nimport { history } from 'common/history';\nimport { NavBarBrand } from './components/navbar-brand';\nimport { NavBarEnd } from './components/navbar-end';\n\nclass Header extends React.Component {\n    /**\n     * constructor of landingPage\n     * @ignore\n     * @constructor Header construct class\n     * @desc build class and bind method\n     * @version 1.0\n     * @since 1.0\n     * @private\n     */\n    constructor(props) {\n        super();\n        this.handleBlog = this.handleBlog.bind(this);\n        this.handleCV = this.handleCV.bind(this);\n        this.handleProfile = this.handleProfile.bind(this);\n        this.handlePort = this.handlePort.bind(this);\n        this.handleHome = this.handleHome.bind(this);\n    }\n\n    handleProfile() {\n        history.push('/me');\n    }\n\n    handleCV() {\n        history.push('/CV');\n    }\n\n    handleBlog() {\n        history.push('/blog');\n    }\n\n    handlePort() {\n        history.push('/portfolio');\n    }\n\n    handleHome() {\n        history.push('/');\n    }\n\n    render() {\n        return (\n            <section class=\"section is-header\">\n                <div class=\"container\">\n                    <nav class=\"navbar is-fixed-top\">\n                        <NavBarBrand />\n                        <NavBarEnd />\n                    </nav>\n                </div>\n            </section>\n        );\n    }\n}\n\nexport { Header };\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Header/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "class",
+    "name": "Header",
+    "memberof": "src/containers/Header/index.jsx",
+    "static": true,
+    "longname": "src/containers/Header/index.jsx~Header",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Header/index.jsx",
+    "importStyle": "{Header}",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 76,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#constructor",
+    "access": "private",
+    "description": "build class and bind method",
+    "lineNumber": 16,
+    "since": "1.0",
+    "version": "1.0",
+    "ignore": true,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": "Header construct class"
+      }
+    ]
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "handleProfile",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#handleProfile",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "handleCV",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#handleCV",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "name": "handleBlog",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#handleBlog",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "handlePort",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#handlePort",
+    "access": "public",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "handleHome",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#handleHome",
+    "access": "public",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Header/index.jsx~Header",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Header/index.jsx~Header#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
+    "name": "src/containers/Home/index.jsx",
+    "content": "import React from 'react';\n\nclass Home extends React.Component {\n    render() {\n        return (\n            <div id=\"homepage\">\n                <p className=\"has-font-serif\">\n                    {'Hello to the Home'}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default Home;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Home/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 89,
+    "kind": "class",
+    "name": "Home",
+    "memberof": "src/containers/Home/index.jsx",
+    "static": true,
+    "longname": "src/containers/Home/index.jsx~Home",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Home/index.jsx",
+    "importStyle": "Home",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Home/index.jsx~Home",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Home/index.jsx~Home#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "name": "src/containers/Me/index.jsx",
+    "content": "import React from 'react';\n\nclass Me extends React.Component {\n    render() {\n        return (\n            <p>\n                {'Welcome to my profile'}\n            </p>\n        );\n    }\n}\n\nexport default Me;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/Me/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 92,
+    "kind": "class",
+    "name": "Me",
+    "memberof": "src/containers/Me/index.jsx",
+    "static": true,
+    "longname": "src/containers/Me/index.jsx~Me",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/Me/index.jsx",
+    "importStyle": "Me",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 93,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/Me/index.jsx~Me",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/Me/index.jsx~Me#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "name": "src/containers/PortFolio/index.jsx",
+    "content": "import React from 'react';\n\nclass Port extends React.Component {\n    render() {\n        return (\n            <div>\n                <p>\n                    {'Welcome to my Port'}\n                </p>\n            </div>\n        );\n    }\n}\n\nexport default Port;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/containers/PortFolio/index.jsx",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 95,
+    "kind": "class",
+    "name": "Port",
+    "memberof": "src/containers/PortFolio/index.jsx",
+    "static": true,
+    "longname": "src/containers/PortFolio/index.jsx~Port",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/containers/PortFolio/index.jsx",
+    "importStyle": "Port",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/PortFolio/index.jsx~Port",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/PortFolio/index.jsx~Port#render",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "file",
+    "name": "src/i18n/en.js",
+    "content": "/**\n * @ignore\n */\nconst en = {\n    title: {\n        brand: 'Junique Virgile',\n    },\n    welcome: {\n        title: 'Welcome ! ',\n    },\n    profile: {\n        userSettings: {\n            title: 'Personal information',\n        },\n    },\n    common: {\n        back: 'Return',\n        validate: 'Validate',\n    },\n    error: {\n        invalidPhone: 'Phone number invalid',\n        onboard: 'Please enquire all field',\n        internal: 'Internal error',\n    },\n    my404: 'Welcome to the my404, are you lost ? ',\n};\n\nexport default en;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/i18n/en.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 98,
+    "kind": "variable",
+    "name": "en",
+    "memberof": "src/i18n/en.js",
+    "static": true,
+    "longname": "src/i18n/en.js~en",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/i18n/en.js",
+    "importStyle": "en",
+    "description": "",
+    "lineNumber": 4,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"title\": *, \"welcome\": *, \"profile\": *, \"common\": *, \"error\": *, \"my404\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "file",
+    "name": "src/i18n/fr.js",
+    "content": "/**\n * @ignore\n */\nconst fr = {\n    title: {\n        brand: 'Junique Virgile',\n    },\n    welcome: {\n        title: 'Bienvenue ! ',\n        account: ' J\\'ai déjà un compte ',\n        addrDelivery: 'Addresse de livraison',\n        desc: 'Entrez votre adresse ou connectez vous afin d’accéder à notre catalogue.',\n    },\n    profile: {\n        userSettings: {\n            title: 'Informations personnelles',\n            phone: 'Tel. portable',\n        },\n    },\n    common: {\n        back: 'Retour',\n        validate: 'Valider',\n        lastName: 'Nom',\n        firstName: 'Prénom',\n        delete: 'Supprimer',\n        edit: 'Editer',\n        email: 'Email',\n        cancel: 'Annuler',\n        submit: 'Soumettre',\n    },\n    error: {\n        invalidPhone: 'Numero de téléphone invalide',\n        onboard: 'Veuillez saisir tout les champs',\n        internal: 'Erreur interne',\n    },\n    my404: 'Bienvenue sur la page404, vous êtes perdu ? ',\n};\n\nexport default fr;\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/i18n/fr.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 100,
+    "kind": "variable",
+    "name": "fr",
+    "memberof": "src/i18n/fr.js",
+    "static": true,
+    "longname": "src/i18n/fr.js~fr",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/i18n/fr.js",
+    "importStyle": "fr",
+    "description": "",
+    "lineNumber": 4,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"title\": *, \"welcome\": *, \"profile\": *, \"common\": *, \"error\": *, \"my404\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "file",
+    "name": "src/i18n/index.js",
+    "content": "import { I18n } from 'react-i18nify';\nimport en from './en';\nimport fr from './fr';\n\n/**\n * @ignore\n */\nconst locale = navigator.language.split('-');\n\nif (locale[0] !== 'en' && locale[0] !== 'fr') {\n    locale[0] = 'en';\n}\n\n/**\n * @ignore\n */\nI18n.setTranslations({\n    fr,\n    en,\n});\n//I18n.setLocale(locale[0]);\nI18n.setLocale('fr');\n\nexport { I18n, locale };\n",
+    "static": true,
+    "longname": "/home/seedz/Project/website/src/i18n/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "name": "locale",
+    "memberof": "src/i18n/index.js",
+    "static": true,
+    "longname": "src/i18n/index.js~locale",
+    "access": "public",
+    "export": true,
+    "importPath": "Seedz-website/src/i18n/index.js",
+    "importStyle": "{locale}",
+    "description": "",
+    "lineNumber": 8,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
     "kind": "file",
     "name": "src/index.js",
-    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { App } from './Containers/App';\nimport * as serviceWorker from './serviceWorker';\n\n/**\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n */\n/*eslint react/jsx-filename-extension: 0*/\nReactDOM.render((\n    <App />\n),\ndocument.getElementById('root'));\nserviceWorker.unregister();\n",
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { App } from 'containers/App';\nimport * as serviceWorker from './serviceWorker';\n\n/**\n * DOM component - setup main component into root div\n * @reactProps {none} none - none\n * @desc Entry point of the react app\n * @extends {ReactDOM}\n * @public\n * @version 1.0\n * @since 1.0\n */\n/*eslint react/jsx-filename-extension: 0*/\nReactDOM.render((\n    <App />\n),\ndocument.getElementById('root'));\nserviceWorker.unregister();\n",
     "static": true,
     "longname": "/home/seedz/Project/website/src/index.js",
     "access": "public",
@@ -775,10 +1484,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 61,
+    "__docId__": 104,
     "kind": "file",
     "name": "src/routes/index.jsx",
-    "content": "import React from 'react';\nimport { Route,\n    Switch,\n} from 'react-router-dom';\nimport { Header } from 'containers/Header';\nimport Home from 'containers/Home';\nimport  { NoMatch } from 'containers/404';\n\nclass MainRouter extends React.Component {\n\n    render() {\n        return (\n            <div>\n                <Header />\n                <Switch>\n                    <Route exact path=\"/\" component={ Home } />\n                    <Route component={ NoMatch } />\n                </Switch>\n            </div>\n        );\n    }\n}\n\nexport default MainRouter;\n",
+    "content": "import React from 'react';\nimport { Route,\n    Switch,\n} from 'react-router-dom';\n// Main containers, always try to avoid default export !\nimport { Header } from 'containers/Header';\nimport { Footer } from 'containers/Footer';\nimport { NoMatch } from 'containers/404';\nimport Me from 'containers/Me';\nimport Blog from 'containers/Blog';\nimport Port from 'containers/PortFolio';\nimport CV from 'containers/CV';\nimport Home from 'containers/Home';\n\nclass MainRouter extends React.Component {\n//@todo : gods games page\n    render() {\n        return (\n            <div>\n                <Header />\n                <Switch>\n                    <Route exact path=\"/\" component={ Home } />\n                    <Route path=\"/about\" component={ Me } />\n                    <Route path=\"/blog\" component={ Blog } />\n                    <Route path=\"/portfolio\" component={ Port } />\n                    <Route path=\"/CV\" component={ CV } />\n                    <Route component={ NoMatch } />\n                </Switch>\n                <Footer />\n            </div>\n        );\n    }\n}\n\nexport default MainRouter;\n",
     "static": true,
     "longname": "/home/seedz/Project/website/src/routes/index.jsx",
     "access": "public",
@@ -786,7 +1495,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 62,
+    "__docId__": 105,
     "kind": "class",
     "name": "MainRouter",
     "memberof": "src/routes/index.jsx",
@@ -797,7 +1506,7 @@
     "importPath": "Seedz-website/src/routes/index.jsx",
     "importStyle": "MainRouter",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 15,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -805,7 +1514,7 @@
     ]
   },
   {
-    "__docId__": 63,
+    "__docId__": 106,
     "kind": "method",
     "name": "render",
     "memberof": "src/routes/index.jsx~MainRouter",
@@ -815,7 +1524,7 @@
     "longname": "src/routes/index.jsx~MainRouter#render",
     "access": "public",
     "description": null,
-    "lineNumber": 11,
+    "lineNumber": 17,
     "undocument": true,
     "params": [],
     "return": {
@@ -825,7 +1534,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 107,
     "kind": "file",
     "name": "src/serviceWorker.js",
     "content": "const isLocalhost = Boolean(\n  window.location.hostname === 'localhost' ||\n    // [::1] is the IPv6 localhost address.\n    window.location.hostname === '[::1]' ||\n    // 127.0.0.1/8 is considered localhost for IPv4.\n    window.location.hostname.match(\n      /^127(?:\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/\n    )\n);\n\nexport function register(config) {\n  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {\n    // The URL constructor is available in all browsers that support SW.\n    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);\n    if (publicUrl.origin !== window.location.origin) {\n      // Our service worker won't work if PUBLIC_URL is on a different origin\n      // from what our page is served on. This might happen if a CDN is used to\n      // serve assets; see https://github.com/facebook/create-react-app/issues/2374\n      return;\n    }\n\n    window.addEventListener('load', () => {\n      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;\n\n      if (isLocalhost) {\n        // This is running on localhost. Let's check if a service worker still exists or not.\n        checkValidServiceWorker(swUrl, config);\n\n        // Add some additional logging to localhost, pointing developers to the\n        // service worker/PWA documentation.\n        navigator.serviceWorker.ready.then(() => {\n          console.log(\n            'This web app is being served cache-first by a service ' +\n              'worker. To learn more, visit http://bit.ly/CRA-PWA'\n          );\n        });\n      } else {\n        // Is not localhost. Just register service worker\n        registerValidSW(swUrl, config);\n      }\n    });\n  }\n}\n\nfunction registerValidSW(swUrl, config) {\n  navigator.serviceWorker\n    .register(swUrl)\n    .then(registration => {\n      registration.onupdatefound = () => {\n        const installingWorker = registration.installing;\n        if (installingWorker == null) {\n          return;\n        }\n        installingWorker.onstatechange = () => {\n          if (installingWorker.state === 'installed') {\n            if (navigator.serviceWorker.controller) {\n              // At this point, the updated precached content has been fetched,\n              // but the previous service worker will still serve the older\n              // content until all client tabs are closed.\n              console.log(\n                'New content is available and will be used when all ' +\n                  'tabs for this page are closed. See http://bit.ly/CRA-PWA.'\n              );\n\n              // Execute callback\n              if (config && config.onUpdate) {\n                config.onUpdate(registration);\n              }\n            } else {\n              // At this point, everything has been precached.\n              // It's the perfect time to display a\n              // \"Content is cached for offline use.\" message.\n              console.log('Content is cached for offline use.');\n\n              // Execute callback\n              if (config && config.onSuccess) {\n                config.onSuccess(registration);\n              }\n            }\n          }\n        };\n      };\n    })\n    .catch(error => {\n      console.error('Error during service worker registration:', error);\n    });\n}\n\nfunction checkValidServiceWorker(swUrl, config) {\n  // Check if the service worker can be found. If it can't reload the page.\n  fetch(swUrl)\n    .then(response => {\n      // Ensure service worker exists, and that we really are getting a JS file.\n      const contentType = response.headers.get('content-type');\n      if (\n        response.status === 404 ||\n        (contentType != null && contentType.indexOf('javascript') === -1)\n      ) {\n        // No service worker found. Probably a different app. Reload the page.\n        navigator.serviceWorker.ready.then(registration => {\n          registration.unregister().then(() => {\n            window.location.reload();\n          });\n        });\n      } else {\n        // Service worker found. Proceed as normal.\n        registerValidSW(swUrl, config);\n      }\n    })\n    .catch(() => {\n      console.log(\n        'No internet connection found. App is running in offline mode.'\n      );\n    });\n}\n\nexport function unregister() {\n  if ('serviceWorker' in navigator) {\n    navigator.serviceWorker.ready.then(registration => {\n      registration.unregister();\n    });\n  }\n}\n",
@@ -836,7 +1545,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 65,
+    "__docId__": 108,
     "kind": "variable",
     "name": "isLocalhost",
     "memberof": "src/serviceWorker.js",
@@ -856,7 +1565,7 @@
     }
   },
   {
-    "__docId__": 66,
+    "__docId__": 109,
     "kind": "function",
     "name": "register",
     "memberof": "src/serviceWorker.js",
@@ -882,7 +1591,7 @@
     "return": null
   },
   {
-    "__docId__": 67,
+    "__docId__": 110,
     "kind": "function",
     "name": "registerValidSW",
     "memberof": "src/serviceWorker.js",
@@ -914,7 +1623,7 @@
     "return": null
   },
   {
-    "__docId__": 68,
+    "__docId__": 111,
     "kind": "function",
     "name": "checkValidServiceWorker",
     "memberof": "src/serviceWorker.js",
@@ -946,7 +1655,7 @@
     "return": null
   },
   {
-    "__docId__": 69,
+    "__docId__": 112,
     "kind": "function",
     "name": "unregister",
     "memberof": "src/serviceWorker.js",
@@ -974,7 +1683,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"Seedz-website\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Seedz Website\",\n  \"main\": \"index.js\",\n  \"private\": true,\n  \"dependencies\": {\n    \"axios\": \"^0.18.0\",\n    \"bulma\": \"^0.7.1\",\n    \"bulma-extensions\": \"^2.2.1\",\n    \"fingerprintjs2\": \"^1.8.0\",\n    \"google-libphonenumber\": \"^3.1.8\",\n    \"history\": \"^4.7.2\",\n    \"immutable\": \"^3.8.2\",\n    \"libphonenumber-js\": \"^1.2.18\",\n    \"lodash\": \"^4.17.10\",\n    \"node-sass\": \"^4.9.1\",\n    \"normalize.css\": \"^8.0.0\",\n    \"normalizr\": \"^3.2.4\",\n    \"npm-run-all\": \"^4.1.3\",\n    \"prop-types\": \"^15.6.1\",\n    \"proptypes\": \"^1.1.0\",\n    \"react\": \"^16.4.0\",\n    \"react-autocomplete\": \"^1.8.1\",\n    \"react-dom\": \"^16.4.0\",\n    \"react-i18nify\": \"^1.11.14\",\n    \"react-loader-spinner\": \"^2.1.0\",\n    \"react-redux\": \"^5.0.7\",\n    \"react-router-dom\": \"^4.3.1\",\n    \"react-scripts\": \"1.1.4\",\n    \"react-transition-group\": \"^2.4.0\",\n    \"react-verification-input\": \"^0.1.3\",\n    \"redux\": \"^4.0.0\",\n    \"redux-logger\": \"^3.0.6\",\n    \"redux-persist\": \"^5.10.0\",\n    \"redux-persist-transform-immutable\": \"^5.0.0\",\n    \"redux-promise-middleware\": \"^5.1.1\",\n    \"redux-thunk\": \"^2.3.0\",\n    \"reselect\": \"^3.0.1\",\n    \"serve\": \"^9.4.2\",\n    \"standard-http-error\": \"^2.0.1\",\n    \"ua-parser-js\": \"^0.7.18\",\n    \"uuid\": \"^3.3.2\"\n  },\n  \"scripts\": {\n    \"build-js\": \"react-scripts build\",\n    \"build-css\": \"node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/\",\n    \"watch-css\": \"npm run build-css && node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/ --watch --recursive\",\n    \"serve\": \"serve -n -l 3000 -s build\",\n    \"build\": \"npm-run-all build-css build-js\",\n    \"start-js\": \"react-scripts start\",\n    \"start:dev\": \"npm-run-all -p watch-css start-js\",\n    \"start:prod\": \"npm-run-all build serve\",\n    \"test-JS\": \"react-scripts test --env=jsdom\",\n    \"test\": \"npm-run-all -p watch-css test-JS\",\n    \"eject\": \"react-scripts eject\",\n    \"lint\": \"./node_modules/.bin/eslint \\\"src/**/*.js*\\\"\",\n    \"serve-doc\": \"serve -d -n -l 3001 doc\",\n    \"gen-doc\": \"esdoc -c ./.esdoc.json\",\n    \"doc\": \"npm-run-all gen-doc serve-doc\"\n  },\n  \"devDependencies\": {\n    \"babel-eslint\": \"^8.2.3\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-brand-plugin\": \"^1.0.1\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-publish-html-plugin\": \"^1.1.2\",\n    \"esdoc-react-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-react-app\": \"^2.1.0\",\n    \"eslint-plugin-eslint-comments\": \"^2.0.2\",\n    \"eslint-plugin-flowtype\": \"^2.49.3\",\n    \"eslint-plugin-import\": \"^2.12.0\",\n    \"eslint-plugin-jest\": \"^21.17.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.9.1\",\n    \"redux-devtools-extension\": \"^2.13.2\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"Seedz-website\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Seedz Website\",\n  \"main\": \"index.js\",\n  \"private\": true,\n  \"dependencies\": {\n    \"axios\": \"^0.18.0\",\n    \"bulma\": \"^0.7.1\",\n    \"bulma-extensions\": \"^2.2.1\",\n    \"fingerprintjs2\": \"^1.8.0\",\n    \"history\": \"^4.7.2\",\n    \"immutable\": \"^3.8.2\",\n    \"lodash\": \"^4.17.10\",\n    \"node-sass\": \"^4.9.1\",\n    \"normalize.css\": \"^8.0.0\",\n    \"normalizr\": \"^3.2.4\",\n    \"npm-run-all\": \"^4.1.3\",\n    \"prop-types\": \"^15.6.1\",\n    \"proptypes\": \"^1.1.0\",\n    \"react\": \"^16.4.0\",\n    \"react-dom\": \"^16.4.0\",\n    \"react-i18nify\": \"^1.11.14\",\n    \"react-loader-spinner\": \"^2.1.0\",\n    \"react-redux\": \"^5.0.7\",\n    \"react-router-dom\": \"^4.3.1\",\n    \"react-scripts\": \"1.1.4\",\n    \"react-transition-group\": \"^2.4.0\",\n    \"react-verification-input\": \"^0.1.3\",\n    \"redux\": \"^4.0.0\",\n    \"redux-logger\": \"^3.0.6\",\n    \"redux-persist\": \"^5.10.0\",\n    \"redux-persist-transform-immutable\": \"^5.0.0\",\n    \"redux-promise-middleware\": \"^5.1.1\",\n    \"redux-thunk\": \"^2.3.0\",\n    \"reselect\": \"^3.0.1\",\n    \"serve\": \"^9.4.2\",\n    \"standard-http-error\": \"^2.0.1\",\n    \"ua-parser-js\": \"^0.7.18\",\n    \"uuid\": \"^3.3.2\"\n  },\n  \"scripts\": {\n    \"build-js\": \"react-scripts build\",\n    \"build-css\": \"node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/\",\n    \"watch-css\": \"npm run build-css && node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/ --watch --recursive\",\n    \"serve\": \"serve -n -l 3000 -s build\",\n    \"build\": \"npm-run-all build-css build-js\",\n    \"start-js\": \"react-scripts start\",\n    \"start:dev\": \"npm-run-all -p watch-css start-js\",\n    \"start:prod\": \"npm-run-all build serve\",\n    \"test-JS\": \"react-scripts test --env=jsdom\",\n    \"test\": \"npm-run-all -p watch-css test-JS\",\n    \"eject\": \"react-scripts eject\",\n    \"lint\": \"./node_modules/.bin/eslint \\\"src/**/*.js*\\\"\",\n    \"serve-doc\": \"serve -d -n -l 3001 doc\",\n    \"gen-doc\": \"esdoc -c ./.esdoc.json\",\n    \"doc\": \"npm-run-all gen-doc serve-doc\"\n  },\n  \"devDependencies\": {\n    \"babel-eslint\": \"^8.2.3\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-brand-plugin\": \"^1.0.1\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-publish-html-plugin\": \"^1.1.2\",\n    \"esdoc-react-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-react-app\": \"^2.1.0\",\n    \"eslint-plugin-eslint-comments\": \"^2.0.2\",\n    \"eslint-plugin-flowtype\": \"^2.49.3\",\n    \"eslint-plugin-import\": \"^2.12.0\",\n    \"eslint-plugin-jest\": \"^21.17.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.9.1\",\n    \"redux-devtools-extension\": \"^2.13.2\"\n  }\n}\n",
     "longname": "/home/seedz/Project/website/package.json",
     "name": "package.json",
     "static": true,
@@ -983,7 +1692,7 @@
   {
     "kind": "manualIndex",
     "globalIndex": true,
-    "content": "# MM-IT website Manual\n\nWelcome ! built with `Reactjs` and `npm`.\n\nUsing your phone or the web you can.\n\n## Contributing\n\nPlease read [CONTRIBUTING](../CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.\n\n## Authors\n\n* **Junique Virgile** - *Initial contributor* - [Junique Virgile](https://github.com/werayn)\n",
+    "content": "# Junique Virgile website Manual\n\nWelcome ! built with `Reactjs` and `npm`.\n\nUsing your phone or the web you can.\n\n## Contributing\n\nPlease read [CONTRIBUTING](../CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.\n\n## Authors\n\n* **Junique Virgile** - *Initial contributor* - [Junique Virgile](https://github.com/werayn)\n",
     "longname": "/home/seedz/Project/website/manual/index.md",
     "name": "./manual/index.md",
     "static": true,
@@ -1048,7 +1757,7 @@
     "kind": "manual",
     "longname": "/home/seedz/Project/website/README.md",
     "name": "./README.md",
-    "content": "# Junique VIrgile Website \n---\n\n## Description\n\nWelcome !\nThis is the website for my freelance company and his portfolio, built with `Reactjs` and `npm` and the respect of the `ES6`.\nUsing your phone or the web you can see and get all the information about me and my professional work.\n\n## Getting started\n\n### Prerequisites\n\n#### IDE\n\nYou can choose the IDE you whant, but you need to have some packages installed with it like `ESLint` for the live linter, and some `React` packages to get autocompletion.\nHere an exemple of the needed packages with Visual Studio Code IDE:\n\n- `Reactjs code snippets`\n- `ESLint`\n\n#### Node / Npm\n\nSince it's a JS-Based project, due to ReactJs you need to install some stuff on your computer:\n\n- macOS:\n  Install [Homebrew](https://brew.sh) as package manager and install the following dependencies:\n\n```bash\nbrew install node\nbrew install npm\n```\n\n---\n\n- Windows:\n  Note that you can't run iOS app on windows.\n  Install [Chocolatey](https://chocolatey.org) as package manager and install the following dependencies:\n\n```bash\nchoco install -y nodejs.install python2 jdk8 npm\n```\n\n---\n\n- Linux:\n  Follow the [install instructions for your linux distribution](https://nodejs.org/en/download/package-manager/) to install Node 8 or newer and npm and his little brother `yarn`.\n\n---\n\n### Install the project\n\nFirst you need to clone the repository:\nDo not forget to upload your SSH Key into github and having the right access.\n\n```bash\ngit clone git@github.com:werayn/draw-my-website\n```\n\nAfter you need to install all the dependencies before trying to run it:\n\n```bash\nyarn install\n```\n\nor simply\n\n```bash\nyarn\n```\n\n### Run it\n\nWhen everything is installed, if you want to run it in local, do the following:\n\n```bash\nyarn start:dev\n```\n\n### Test it\n\nwhen everything is installed and run well, if you want to run every unit tests, do the following:\n\n```bash\nyarn test\n```\n\n## Deployement\n\nYou need to install all the dependencies before trying to deploy it:\n\n```bash\nyarn install\n```\n\nor simply\n\n```bash\nyarn\n```\n\nWhen everything is installed, if you want to deploy it, do the following:\n\n```bash\nyarn start:prod\n```\n\n## Documentation\n\nif you want to know everything about my website just run :\n\n```bash\nyarn doc\n```\n\n## Contributing\n\nPlease read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.\n\n## Versioning\n\nI use nothing for the versioning right now.\n\n## Authors\n\n* **Junique Virgile** - *Initial contributor* - [Junique Virgile](https://github.com/werayn)\n\n## License\n\nThis project is no licensed - it's a completely private project.\n\n## Acknowledgments\n* Thank's to [Jérémy Marjollet](https://github.com/JeremyMarjollet) for his help into my devOps solution\n---\n",
+    "content": "# Junique Virgile Website\n---\n\n## Description\n\nWelcome !\nThis is the website for my freelance company and his portfolio, built with `Reactjs` and `npm` and the respect of the `ES6`.\nUsing your phone or the web you can see and get all the information about me and my professional work.\n\n## Getting started\n\n### Prerequisites\n\n#### IDE\n\nYou can choose the IDE you whant, but you need to have some packages installed with it like `ESLint` for the live linter, and some `React` packages to get autocompletion.\nHere an exemple of the needed packages with Visual Studio Code IDE:\n\n- `Reactjs code snippets`\n- `ESLint`\n\n#### Node / Npm\n\nSince it's a JS-Based project, due to ReactJs you need to install some stuff on your computer:\n\n- macOS:\n  Install [Homebrew](https://brew.sh) as package manager and install the following dependencies:\n\n```bash\nbrew install node\nbrew install npm\n```\n\n---\n\n- Windows:\n  Note that you can't run iOS app on windows.\n  Install [Chocolatey](https://chocolatey.org) as package manager and install the following dependencies:\n\n```bash\nchoco install -y nodejs.install python2 jdk8 npm\n```\n\n---\n\n- Linux:\n  Follow the [install instructions for your linux distribution](https://nodejs.org/en/download/package-manager/) to install Node 8 or newer and npm and his little brother `yarn`.\n\n---\n\n### Install the project\n\nFirst you need to clone the repository:\nDo not forget to upload your SSH Key into github and having the right access.\n\n```bash\ngit clone git@github.com:werayn/draw-my-website\n```\n\nAfter you need to install all the dependencies before trying to run it:\n\n```bash\nyarn install\n```\n\nor simply\n\n```bash\nyarn\n```\n\n### Run it\n\nWhen everything is installed, if you want to run it in local, do the following:\n\n```bash\nyarn start:dev\n```\n\n### Test it\n\nwhen everything is installed and run well, if you want to run every unit tests, do the following:\n\n```bash\nyarn test\n```\n\n## Deployement\n\nYou need to install all the dependencies before trying to deploy it:\n\n```bash\nyarn install\n```\n\nor simply\n\n```bash\nyarn\n```\n\nWhen everything is installed, if you want to deploy it, do the following:\n\n```bash\nyarn start:prod\n```\n\n## Documentation\n\nif you want to know everything about my website just run :\n\n```bash\nyarn doc\n```\n\n## Contributing\n\nPlease read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.\n\n## Versioning\n\nI use nothing for the versioning right now.\n\n## Authors\n\n* **Junique Virgile** - *Initial contributor* - [Junique Virgile](https://github.com/werayn)\n\n## License\n\nThis project is no licensed - it's a completely private project.\n\n## Acknowledgments\n* Thank's to [Jérémy Marjollet](https://github.com/JeremyMarjollet) for his help into my devOps solution\n---\n",
     "static": true,
     "access": "public"
   }

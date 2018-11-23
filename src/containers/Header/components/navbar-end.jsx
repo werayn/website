@@ -3,30 +3,30 @@ import React from 'react';
 class NavBarEnd extends React.Component {
     render() {
         return (
-            <div id="navbar-default" class="navbar-menu">
-                <div class="navbar-end">
-                    <span class="navbar-item">
-                        <a class="is-link is-active" href="/">
+            <div id="navbar-default" className="navbar-menu">
+                <div className="navbar-end">
+                    <span className="navbar-item">
+                        <a className="is-link is-active" href="/">
                             { 'Home' }
                         </a>
                     </span>
-                    <span class="navbar-item">
-                        <a class="is-link is-active" href="/CV">
+                    <span className="navbar-item">
+                        <a className="is-link is-active" href="/CV">
                             { 'CV' }
                         </a>
                     </span>
-                    <span class="navbar-item">
-                        <a class="is-link is-active" href="/blog">
+                    <span className="navbar-item">
+                        <a className="is-link is-active" href="/blog">
                             { 'Blog' }
                         </a>
                     </span>
-                    <span class="navbar-item">
-                        <a class="is-link is-active" href="/portfolio">
+                    <span className="navbar-item">
+                        <a className="is-link is-active" href="/portfolio">
                             { 'PortFolio' }
                         </a>
                     </span>
-                    <span class="navbar-item">
-                        <a class="is-link is-active" href="/about">
+                    <span className="navbar-item">
+                        <a className="is-link is-active" href="/about">
                             { 'About' }
                         </a>
                     </span>

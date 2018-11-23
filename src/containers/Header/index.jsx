@@ -44,9 +44,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <section class="section is-header">
-                <div class="container">
-                    <nav class="navbar is-fixed-top">
+            <section className="section is-header">
+                <div className="container">
+                    <nav className="navbar is-fixed-top">
                         <NavBarBrand />
                         <NavBarEnd />
                     </nav>
