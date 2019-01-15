@@ -1,33 +1,28 @@
 import React from 'react';
 
-class NavBarEnd extends React.Component {
+class NavBarTabs extends React.Component {
     render() {
         return (
-            <div id="navbar-default" className="navbar-menu">
+            <div id="navMenu" className="navbar-menu">
                 <div className="navbar-end">
                     <span className="navbar-item">
-                        <a className="is-link is-active" href="/">
-                            { 'Home' }
+                        <a className=" has-text-white" href="/portfolio">
+                            {'PortFolio'}
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="is-link is-active" href="/CV">
-                            { 'CV' }
+                        <a className="has-text-white" href="/CV">
+                            {'CV'}
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="is-link is-active" href="/blog">
-                            { 'Blog' }
+                        <a className=" has-text-white" href="/contact">
+                            {'Contact'}
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="is-link is-active" href="/portfolio">
-                            { 'PortFolio' }
-                        </a>
-                    </span>
-                    <span className="navbar-item">
-                        <a className="is-link is-active" href="/about">
-                            { 'About' }
+                        <a className="has-text-white" href="/blog">
+                            {'Blog'}
                         </a>
                     </span>
                 </div>
@@ -36,4 +31,4 @@ class NavBarEnd extends React.Component {
     }
 }
 
-export { NavBarEnd };
+export { NavBarTabs };

@@ -5,10 +5,15 @@ import { NumberPres } from './components/NumberPres';
 class Home extends React.Component {
     render() {
         return (
-            <div id="homepage test">
-                <Welcoming />
-                <NumberPres />
+            <div className="homepage">
+                <section class="hero is-primary">
+                    <Welcoming />
+                </section>
+                <section class="hero is-primary">
+                    <NumberPres />
+                </section>
             </div>
+
         );
     }
 }

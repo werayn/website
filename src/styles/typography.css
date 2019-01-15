@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Lora");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body, h1, h2, h3, h4, h5, h6, p, div, span, label, input, button, select, textarea, a, p, strong {
+  font-family: "Open Sans", sans-serif; }
+
+.has-font-serif {
+  font-family: "Lora", serif; }
+
+.has-text-underlined {
+  text-decoration: underline; }
+
+b {
+  font-weight: bold; }
