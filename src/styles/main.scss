@@ -1,5 +1,7 @@
-@import 'bulma/bulma';
-@import 'bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.sass';
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+@import "../../node_modules/bulma/bulma";
 
 @import './variables.scss';
 @import './functions.scss';
@@ -8,40 +10,8 @@
 @import './helpers.scss';
 @import './mixins.scss';
 
-@import '../containers/Home/style.scss';
 @import '../containers/Header/style.scss';
+@import '../containers/Home/style.scss';
 
-.fade-enter {
-    opacity: 0;
-    z-index: 1;
-  }
 
-  .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 250ms ease-in;
-}
-
-* {
-  box-sizing: border-box;
- }
- *:before,
- *:after {
-  box-sizing: border-box;
- }
- html,
- body {
-  height: 100%;
-  position: relative;
- }
- .main-container {
-  min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px; /* height of your footer */
- }
- footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
- }
+$navbar-burger-color: $cool-grey-75;

@@ -6,11 +6,11 @@ class FooterInfo extends React.Component {
             <div className="content has-text-centered">
                 <p>
                     <strong>
-                        {'Junique Virgile'}
+                        {'Seedz website'}
                     </strong>
                     {' by '}
-                    <a href="https://junique-virgile.com">
-                        {'Social Media'}
+                    <a href="https://github.com/werayn">
+                        {'Junique Virgile'}
                     </a>
                     <br />
                     {' The website content is licensed and private '}

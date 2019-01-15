@@ -42,7 +42,7 @@
   "scripts": {
     "build-js": "react-scripts build",
     "build-css": "node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/",
-    "watch-css": "npm run build-css && node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/ --watch --recursive",
+    "watch-css": "npm run build-css && node-sass --include-path ./node_modules src/styles/main.scss -o src/styles/ --watch main.scss:node_modules/bulma/css/bulma.css --recursive",
     "serve": "serve -n -l 3000 -s build",
     "build": "npm-run-all build-css build-js",
     "start-js": "react-scripts start",

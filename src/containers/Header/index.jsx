@@ -1,7 +1,6 @@
 import React from 'react';
-import { history } from 'common/history';
 import { NavBarBrand } from './components/navbar-brand';
-import { NavBarEnd } from './components/navbar-end';
+import { NavBarTabs } from './components/navbar-end';
 
 class Header extends React.Component {
     /**
@@ -15,43 +14,28 @@ class Header extends React.Component {
      */
     constructor(props) {
         super();
-        this.handleBlog = this.handleBlog.bind(this);
-        this.handleCV = this.handleCV.bind(this);
-        this.handleProfile = this.handleProfile.bind(this);
-        this.handlePort = this.handlePort.bind(this);
-        this.handleHome = this.handleHome.bind(this);
+        this.handleBurger = this.handleBurger.bind(this);
     }
 
-    handleProfile() {
-        history.push('/me');
+    handleBurger() {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('#' + burger.dataset.target);
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('is-active');
+            nav.classList.toggle('is-active');
+        });
     }
 
-    handleCV() {
-        history.push('/CV');
-    }
-
-    handleBlog() {
-        history.push('/blog');
-    }
-
-    handlePort() {
-        history.push('/portfolio');
-    }
-
-    handleHome() {
-        history.push('/');
-    }
 
     render() {
         return (
-            <section className="section is-header">
+            <nav className="navbar has-background-grey is-fixed-top">
                 <div className="container">
-                    <nav className="navbar is-fixed-top">
-                        <NavBarBrand />
-                        <NavBarEnd />
-                    </nav>
+                    <NavBarBrand handleBurger={ this.handleBurger } />
+                    <NavBarTabs />
                 </div>
-            </section>
+            </nav>
         );
     }
 }

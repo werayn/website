@@ -1,15 +1,15 @@
 import React from 'react';
 
-class CV extends React.Component {
+class Project extends React.Component {
     render() {
         return (
             <div>
                 <strong>
-                    {'hosting CV'}
+                    {'Project Inquiry'}
                 </strong>
             </div>
         );
     }
 }
 
-export default CV;
+export default Project;

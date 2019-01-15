@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Me extends React.Component {
+class Contact extends React.Component {
     render() {
         return (
             <p>
-                {'Welcome to my profile'}
+                {'Welcome to my Contact'}
             </p>
         );
     }
 }
 
-export default Me;
+export default Contact;
