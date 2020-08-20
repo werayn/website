@@ -1,0 +1,67 @@
+list-item:hover {
+  filter: blur(4px);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+.circle-background,
+.circle-progress {
+  fill: none;
+}
+
+.circle-background {
+  stroke: #ddd;
+}
+
+.circle-progress {
+  stroke: red;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circle-text {
+  font-size: 3em;
+  font-weight: bold;
+  fill: red;
+}
+
+.click-extended{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-right: 2em;
+  margin-right: -2em;
+}
+
+.expand {
+  position: relative;
+}
+
+.expand:after {
+  content: '';
+  position: absolute;
+  top: -10px; bottom: -10px;
+  left: -10px; right: -10px;
+}

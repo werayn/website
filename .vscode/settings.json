@@ -41,5 +41,8 @@
   "javascript.preferences.quoteStyle": "single",
   "files.insertFinalNewline": true,
   "editor.insertSpaces": true,
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

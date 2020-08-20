@@ -1,0 +1,14 @@
+/**
+ * @constant
+ * @desc every action type
+ * @version 1.0
+ * @since 1.0
+ * @public
+ */
+export default {
+    DASHBOARD: 'DASHBOARD::DASHBOARD',
+    DASHBOARD_PENDING: 'DASHBOARD::DASHBOARD_PENDING',
+    DASHBOARD_FULFILLED: 'DASHBOARD::DASHBOARD_FULFILLED',
+    DASHBOARD_REJECTED: 'DASHBOARD::DASHBOARD_REJECTED',
+    CLEAR_ERROR: 'DASHBOARD:CLEAR_ERROR',
+};
